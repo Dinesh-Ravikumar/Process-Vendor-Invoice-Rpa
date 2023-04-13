@@ -1,0 +1,279 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Generic/LaunchBrowser.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "AcmeUrl"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Generic/LoginAcme.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "isLoginPageExist&Sequence_3",
+        "Password&Sequence_1",
+        "Image&Sequence_1",
+        "UserName&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_1",
+        "FilteredDataTable&Sequence_1",
+        "PdfName&Sequence_3",
+        "VendorPdfText&Sequence_3",
+        "TaxId&Sequence_3",
+        "Currency&Sequence_3",
+        "ItemDescription&Sequence_3",
+        "UntaxedAmount&Sequence_3",
+        "TaxAmount&Sequence_3",
+        "TotalAmount&Sequence_3",
+        "InvoiceDate&Sequence_3",
+        "VendorName&Sequence_3",
+        "IsVendorExist&Sequence_3",
+        "PdfPath&Sequence_3",
+        "InvoiceId&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Generic/LogoutAcme.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "IsLogoutButtonExist&Sequence_2",
+        "Image&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Navigation And Access/ClickMenuItem.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "SubMenuName",
+        "MenuName"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Navigation And Access/NavigateMenu.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "IsNavigateMenuExist&Sequence_2",
+        "Image&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "NavigateMenuName"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Navigation And Access/GoToPage.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "IsPageIconExist&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "PageNumber"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Navigation And Access/OpenWorkItem.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "IsWorkItemIdExist&Sequence_7",
+        "Image&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "WorkItemId"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Navigation And Access/ClickWorkItemMenu.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "IsMenuExist&Sequence_2",
+        "Image&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "MenuName"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Vendor PDF Workflow/DownloadPdf.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Window&Sequence_20",
+        "IsDownloadButtonExist&Sequence_12",
+        "IsSaveAsWindowExist&Sequence_13",
+        "PdfPathTextBox&Sequence_14",
+        "Image&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "PdfName",
+        "PdfPath"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Fill And Update/AddInvoiceDetails.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "IsInvoiceAdded&Sequence_5",
+        "Image&Sequence_1",
+        "IsPageExist&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "InvoiceDate",
+        "TotalAmount",
+        "TaxAmount",
+        "UntaxedAmount",
+        "ItemDescription",
+        "Currency",
+        "TaxId",
+        "InvoiceNumber"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Fill And Update/UpdateWorkItem.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "IsUpdatedPopupExist&Sequence_3",
+        "IsUpdatePageExist&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "SetStatus",
+        "Comment"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Search Vendor/SearchVendor.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "IsSearchVendorExist&Sequence_2",
+        "Image&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "VendorTaxId",
+        "VendorName"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Work Items Extraction/ExtractWorkItems.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Count&Sequence_4",
+        "AssignPage&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "ExtractDataTable"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Work Items Extraction/FilterWorkItems.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "ExtractDataTable",
+        "FilteredDataTable",
+        "ColumnValue"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Search Vendor/ExtractVendorSearchResult.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "IsVendorExist"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Vendor PDF Workflow/OpenVendorPdf.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "IsFileExist&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "PdfName",
+        "PdfPath",
+        "VendorPdfText"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Navigation And Access/GoBack.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Vendor PDF Workflow/GetVendorInfo.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "PdfTextCollection&Sequence_3",
+        "IsHeaderFound&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "InvoiceId",
+        "VendorName",
+        "InvoiceDate",
+        "Currency",
+        "TotalAmount",
+        "TaxAmount",
+        "UntaxedAmount",
+        "TaxId",
+        "ItemDescription",
+        "VendorPdfText"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}
