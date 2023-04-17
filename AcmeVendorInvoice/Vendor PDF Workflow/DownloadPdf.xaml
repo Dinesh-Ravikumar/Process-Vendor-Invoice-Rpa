@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1222,5856</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1222,5592</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DownloadPdf_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -105,7 +105,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This sequence downloads the pdf and stores it in the desired path " DisplayName="DownloadPdf" sap:VirtualizedContainerService.HintSize="668,5791" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="This sequence downloads the pdf and stores it in the desired path " DisplayName="DownloadPdf" sap:VirtualizedContainerService.HintSize="668,5527" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:Image" Name="Image" />
     </Sequence.Variables>
@@ -116,7 +116,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="606,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Download pdf Sequence started&quot;]" />
-    <Sequence DisplayName="Click Download Button" sap:VirtualizedContainerService.HintSize="606,5253" sap2010:WorkflowViewState.IdRef="Sequence_20">
+    <Sequence DisplayName="Click Download Button" sap:VirtualizedContainerService.HintSize="606,5121" sap2010:WorkflowViewState.IdRef="Sequence_20">
       <Sequence.Variables>
         <Variable x:TypeArguments="ui:Window" Name="Window" />
       </Sequence.Variables>
@@ -126,7 +126,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" sap2010:Annotation.AnnotationText="Screen scope for the access panel in the pdf download section" CvMethod="ElementDetection, OCR" DesignTimeCacheId="77bc64bc-33bd-4a32-964e-168578595e55" DisplayName="CV Screen Scope 'pane'" sap:VirtualizedContainerService.HintSize="544,2157" sap2010:WorkflowViewState.IdRef="CVScope_5" SendOnPremData="False" Version="V6">
+      <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" sap2010:Annotation.AnnotationText="Screen scope for the access panel in the pdf download section" CvMethod="ElementDetection, OCR" DesignTimeCacheId="4bbc9397-87b3-41f3-b67a-95a80a69902f" DisplayName="CV Screen Scope 'pane'" sap:VirtualizedContainerService.HintSize="544,2025" sap2010:WorkflowViewState.IdRef="CVScope_5" SendOnPremData="False" Version="V6">
         <p:CVScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -157,14 +157,14 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </p:CvElementExistsWithDescriptor>
-              <If sap2010:Annotation.AnnotationText="Condition for if the button is exist or not, if exist it clicks and gets the name of the pdf else logs an error" Condition="[IsDownloadButtonExist]" sap:VirtualizedContainerService.HintSize="510,1479" sap2010:WorkflowViewState.IdRef="If_4">
+              <If sap2010:Annotation.AnnotationText="Condition for if the button is exist or not, if exist it clicks and gets the name of the pdf else logs an error" Condition="[IsDownloadButtonExist]" sap:VirtualizedContainerService.HintSize="510,1347" sap2010:WorkflowViewState.IdRef="If_4">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="476,1107" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <Sequence sap:VirtualizedContainerService.HintSize="476,975" sap2010:WorkflowViewState.IdRef="Sequence_15">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -176,7 +176,7 @@
                         <OutArgument x:TypeArguments="x:String">[PdfName]</OutArgument>
                       </ui:GetAttribute.Result>
                       <ui:GetAttribute.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="11e301c9-61e1-43a3-ab4c-942ebcd9c139" InformativeScreenshot="6b138b5bdab95f78fb6579cb41876cb5" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Invoice-463453.pdf - Google Chrome' /&gt;&lt;ctrl name='Invoice-463453.pdf' role='document' /&gt;&lt;ctrl idx='2' role='grouping' /&gt;">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="11e301c9-61e1-43a3-ab4c-942ebcd9c139" InformativeScreenshot="6b138b5bdab95f78fb6579cb41876cb5" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*' /&gt;&lt;ctrl name='*' role='document' /&gt;&lt;ctrl idx='2' role='grouping' /&gt;">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>
@@ -240,7 +240,6 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </p:CvClickWithDescriptor>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Info" Message="[PdfName]" />
                   </Sequence>
                 </If.Then>
                 <If.Else>
@@ -263,8 +262,8 @@
         <p:CVScope.DesignTimeCacheContainer>
           <uc:CvCacheContainer>
             <uc:CvCacheContainer.Caches>
-              <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
-                <uc:CVCache DataSent="False" DisplayName="Screen CV Element Exists - Ico (Main)" Id="77bc64bc-33bd-4a32-964e-168578595e55" InformativeScreenshot="18c9142b43df36abf613f1f103445730" LogicalPosition="0, 103" OcrText="Invoice-463453.pdf 1 / 1 - 100% + O" Position="0, 103" ScreenshotGuid="f495a068-edfc-4ed0-8df6-ce4800d3789e" ServerVersion="1">
+              <scg:List x:TypeArguments="uc:CVCache" Capacity="2">
+                <uc:CVCache DataSent="False" DisplayName="Screen CV Element Exists - Ico " Id="77bc64bc-33bd-4a32-964e-168578595e55" InformativeScreenshot="18c9142b43df36abf613f1f103445730" LogicalPosition="0, 103" OcrText="Invoice-463453.pdf 1 / 1 - 100% + O" Position="0, 103" ScreenshotGuid="f495a068-edfc-4ed0-8df6-ce4800d3789e" ServerVersion="1">
                   <uc:CVCache.CvAnchorRelations>
                     <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
                   </uc:CVCache.CvAnchorRelations>
@@ -306,6 +305,70 @@
                     </scg:List>
                   </uc:CVCache.OcrTexts>
                 </uc:CVCache>
+                <uc:CVCache DataSent="False" DisplayName="Main Screen" Id="4bbc9397-87b3-41f3-b67a-95a80a69902f" InformativeScreenshot="aa21410a6c9c6ab3c1f5079452a633ee" LogicalPosition="0, 103" OcrText="Invoice-547759.pdf 1 / 1 _ 100% +" Position="0, 103" ScreenshotGuid="172c89d8-9c7a-4b03-bb6f-9ff05c83b46a" ServerVersion="1">
+                  <uc:CVCache.CvAnchorRelations>
+                    <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
+                      <uc:AnchorRelationInfo IsTargetText="False" Target="8">
+                        <uc:AnchorRelationInfo.Anchors>
+                          <x:Array Type="x:Int32">
+                            <x:Int32>5</x:Int32>
+                          </x:Array>
+                        </uc:AnchorRelationInfo.Anchors>
+                      </uc:AnchorRelationInfo>
+                      <uc:AnchorRelationInfo IsTargetText="False" Target="9">
+                        <uc:AnchorRelationInfo.Anchors>
+                          <x:Array Type="x:Int32">
+                            <x:Int32>1</x:Int32>
+                          </x:Array>
+                        </uc:AnchorRelationInfo.Anchors>
+                      </uc:AnchorRelationInfo>
+                      <uc:AnchorRelationInfo IsTargetText="False" Target="10">
+                        <uc:AnchorRelationInfo.Anchors>
+                          <x:Array Type="x:Int32">
+                            <x:Int32>0</x:Int32>
+                          </x:Array>
+                        </uc:AnchorRelationInfo.Anchors>
+                      </uc:AnchorRelationInfo>
+                    </scg:List>
+                  </uc:CVCache.CvAnchorRelations>
+                  <uc:CVCache.CvUiElements>
+                    <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="32">
+                      <uc:CvElementInfo Category="Icon" Region="20, 16, 26, 24" />
+                      <uc:CvElementInfo Category="Icon" Region="1075, 16, 25, 24" />
+                      <uc:CvElementInfo Category="Icon" Region="987, 17, 22, 22" />
+                      <uc:CvElementInfo Category="Icon" Region="1039, 17, 24, 21" />
+                      <uc:CvElementInfo Category="Icon" Region="1834, 16, 25, 23" />
+                      <uc:CvElementInfo Category="Icon" Region="1796, 16, 20, 22" />
+                      <uc:CvElementInfo Category="Icon" Region="1877, 16, 18, 25" />
+                      <uc:CvElementInfo Category="Icon" Region="899, 19, 21, 17" />
+                      <uc:CvElementInfo Category="InputBox" Region="930, 16, 49, 24" />
+                      <uc:CvElementInfo Category="InputBox" Region="812, 16, 27, 24" />
+                      <uc:CvElementInfo Category="InputBox" Region="38, 5, 776, 44" />
+                      <uc:CvElementInfo Category="Icon" Region="838, 19, 13, 18" />
+                      <uc:CvElementInfo Category="InputBox" Region="1088, 6, 717, 42" />
+                      <uc:CvElementInfo Category="Button" Region="930, 16, 48, 24" />
+                      <uc:CvElementInfo Category="Icon" Region="813, 16, 25, 23" />
+                      <uc:CvElementInfo Category="Icon" Region="851, 19, 13, 16" />
+                      <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="812, 16, 27, 24" />
+                      <uc:CvElementInfo Category="MinimizeButton" Confidence="Runtime" Region="898, 18, 21, 19" />
+                      <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="930, 17, 47, 23" />
+                      <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="896, 17, 28, 22" />
+                      <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="983, 14, 38, 28" />
+                      <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1796, 17, 21, 23" />
+                    </scg:List>
+                  </uc:CVCache.CvUiElements>
+                  <uc:CVCache.OcrTexts>
+                    <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="7">
+                      <uc:OcrTextInfo Region="66, 20, 125, 17" Text="Invoice-547759.pdf" />
+                      <uc:OcrTextInfo Region="821, 22, 7, 12" Text="1" />
+                      <uc:OcrTextInfo Region="840, 21, 8, 13" Text="/" />
+                      <uc:OcrTextInfo Region="854, 21, 7, 12" Text="1" />
+                      <uc:OcrTextInfo Region="902, 19, 15, 15" Text="_" />
+                      <uc:OcrTextInfo Region="937, 22, 34, 12" Text="100%" />
+                      <uc:OcrTextInfo Region="991, 20, 15, 15" Text="+" />
+                    </scg:List>
+                  </uc:CVCache.OcrTexts>
+                </uc:CVCache>
               </scg:List>
             </uc:CvCacheContainer.Caches>
           </uc:CvCacheContainer>
@@ -319,7 +382,7 @@
           </ActivityFunc>
         </p:CVScope.OCREngine>
         <p:CVScope.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1121c087-983b-475c-b661-c2bbdbaa3918" InformativeScreenshot="11b6909d80b86119a9017a397036e5d4" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Invoice-463453.pdf - Google Chrome' /&gt;&lt;ctrl name='Invoice-463453.pdf' role='document' /&gt;&lt;ctrl idx='2' role='grouping' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1121c087-983b-475c-b661-c2bbdbaa3918" InformativeScreenshot="31c174bc2e5920730f25793716e944a3" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*' /&gt;&lt;ctrl name='*' role='document' /&gt;&lt;ctrl idx='2' role='grouping' /&gt;" WaitForReady="INTERACTIVE">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>
@@ -1135,6 +1198,5 @@
       </p:CVScope>
     </Sequence>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="606,92" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Download pdf sequence ended&quot;]" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="606,92" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Warn" Message="[PdfName]" />
   </Sequence>
 </Activity>

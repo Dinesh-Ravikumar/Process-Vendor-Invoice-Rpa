@@ -226,6 +226,7 @@
         "ExtractDataTable&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [
+        "TaxId",
         "IsVendorExist"
       ],
       "ConstantsSectionElementsOrder": null,
