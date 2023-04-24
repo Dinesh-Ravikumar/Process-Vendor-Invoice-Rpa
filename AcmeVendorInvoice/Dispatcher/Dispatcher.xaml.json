@@ -1,0 +1,20 @@
+{
+  "DisplayName": "Dispatcher",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "FilteredDataTable",
+      "DisplayName": "FilteredDataTable",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    }
+  ]
+}
