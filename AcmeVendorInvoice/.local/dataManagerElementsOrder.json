@@ -94,7 +94,7 @@
       "Path": "Navigation And Access/GoToPage.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "IsPageIconExist&Sequence_4"
+        "IsPageNumberExist&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
         "PageNumber"
@@ -281,7 +281,7 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "FilteredWorkItems"
+        "FilteredDataTable"
       ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
@@ -289,8 +289,35 @@
     {
       "Path": "Performer/Performer.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "VendorPdfText&Sequence_2",
+        "PdfName&Sequence_2",
+        "PdfPath&Sequence_2",
+        "IsVendorExist&Sequence_2",
+        "InvoiceId&Sequence_2",
+        "VendorName&Sequence_2",
+        "InvoiceDate&Sequence_2",
+        "Currency&Sequence_2",
+        "TotalAmount&Sequence_2",
+        "TaxAmount&Sequence_2",
+        "UntaxedAmount&Sequence_2",
+        "TaxId&Sequence_2",
+        "ItemDescription&Sequence_2",
+        "QueueItems&Sequence_1",
+        "TransactionItem&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Processes/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "FilteredDataTable",
+        "BotType"
+      ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     }

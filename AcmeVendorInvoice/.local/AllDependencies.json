@@ -21946,8 +21946,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dineshkumar.ravikuma\\.nuget\\packages\\": {},
-    "C:\\Users\\dineshkumar.ravikuma\\AppData\\Local\\UiPath\\NugetFallbackFolder": {}
+    "C:\\Users\\dineshkumar.ravikuma\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
@@ -21955,10 +21954,7 @@
       "projectName": "AcmeVendorInvoice",
       "projectPath": "C:\\Users\\dineshkumar.ravikuma\\Documents\\UiPath\\AcmeVendorInvoice\\.local",
       "packagesPath": "C:\\Users\\dineshkumar.ravikuma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dineshkumar.ravikuma\\Documents\\UiPath\\AcmeVendorInvoice\\.local",
-      "fallbackFolders": [
-        "C:\\Users\\dineshkumar.ravikuma\\AppData\\Local\\UiPath\\NugetFallbackFolder"
-      ]
+      "outputPath": "C:\\Users\\dineshkumar.ravikuma\\Documents\\UiPath\\AcmeVendorInvoice\\.local"
     },
     "frameworks": {
       "net6.0-windows7.0": {

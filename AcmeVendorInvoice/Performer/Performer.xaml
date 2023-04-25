@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Performer" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1222,1775" sap2010:WorkflowViewState.IdRef="Performer_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Performer" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1219,6936" sap2010:WorkflowViewState.IdRef="Performer_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -73,7 +73,7 @@
       <AssemblyReference>System.Collections</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Performer" sap:VirtualizedContainerService.HintSize="624,1710" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This sequence performs the queue transaction items for further processes" DisplayName="Performer" sap:VirtualizedContainerService.HintSize="646,6871" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:QueueItem" Name="TransactionItem" />
       <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="QueueItems" />
@@ -81,28 +81,287 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Reference="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="Equals" FolderPath="theonewhoknocks123@hotmail.com's workspace" sap:VirtualizedContainerService.HintSize="562,143" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" QueueItemStates="All" QueueName="Filtered_Work_Items" Result="[QueueItems]" />
-    <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Transaction Item" FolderPath="theonewhoknocks123@hotmail.com's workspace" sap:VirtualizedContainerService.HintSize="562,143" sap2010:WorkflowViewState.IdRef="GetQueueItem_1" QueueType="Filtered_Work_Items" TransactionItem="[TransactionItem]" />
-    <If Condition="[QueueItems.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="562,1233" sap2010:WorkflowViewState.IdRef="If_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="584,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Performer Sequence started&quot;]" />
+    <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Reference="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="Equals" FolderPath="theonewhoknocks123@hotmail.com's workspace" sap:VirtualizedContainerService.HintSize="584,143" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" QueueItemStates="All" QueueName="Filtered_Work_Items" Result="[QueueItems]" />
+    <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Transaction Item" FolderPath="theonewhoknocks123@hotmail.com's workspace" sap:VirtualizedContainerService.HintSize="584,143" sap2010:WorkflowViewState.IdRef="GetQueueItem_1" QueueType="Filtered_Work_Items" TransactionItem="[TransactionItem]" />
+    <If Condition="[QueueItems.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="584,6099" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="528,871" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence sap:VirtualizedContainerService.HintSize="550,5737" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[TransactionItem IsNot Nothing]" DisplayName="While" sap:VirtualizedContainerService.HintSize="486,783" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+          <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[TransactionItem IsNot Nothing]" DisplayName="While" sap:VirtualizedContainerService.HintSize="508,5649" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
             <ui:InterruptibleWhile.Body>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,617" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="472,5483" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="ItemDescription" />
+                  <Variable x:TypeArguments="x:String" Name="TaxId" />
+                  <Variable x:TypeArguments="x:String" Name="UntaxedAmount" />
+                  <Variable x:TypeArguments="x:String" Name="TaxAmount" />
+                  <Variable x:TypeArguments="x:String" Name="TotalAmount" />
+                  <Variable x:TypeArguments="x:String" Name="Currency" />
+                  <Variable x:TypeArguments="x:String" Name="InvoiceDate" />
+                  <Variable x:TypeArguments="x:String" Name="VendorName" />
+                  <Variable x:TypeArguments="x:String" Name="InvoiceId" />
+                  <Variable x:TypeArguments="x:Boolean" Name="IsVendorExist" />
+                  <Variable x:TypeArguments="x:String" Name="PdfPath">
+                    <Variable.Default>
+                      <Literal x:TypeArguments="x:String">C:\AcmePdf</Literal>
+                    </Variable.Default>
+                  </Variable>
+                  <Variable x:TypeArguments="x:String" Name="PdfName" />
+                  <Variable x:TypeArguments="x:String" Name="VendorPdfText" />
+                </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[TransactionItem.SpecificContent.GetValueOrDefault(&quot;WIID&quot;)]" />
-                <ui:SetTransactionStatus ContinueOnError="{x:Null}" Reason="{x:Null}" ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status" ErrorType="Business" FolderPath="theonewhoknocks123@hotmail.com's workspace" sap:VirtualizedContainerService.HintSize="388,191" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_1" Status="Successful" TransactionItem="[TransactionItem]">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[TransactionItem.SpecificContent.GetValueOrDefault(&quot;WIID&quot;)]" />
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation And Access\ClickMenuItem.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="410,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Navigation And Access\ClickMenuItem.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="MenuName">Work Items</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="SubMenuName" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,92" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Warn" Message="[TransactionItem.SpecificContent.GetValueOrDefault(&quot;PageNo&quot;).ToString]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,92" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Warn" Message="[TransactionItem.SpecificContent.GetValueOrDefault(&quot;WIID&quot;).ToString]" />
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation And Access\GoToPage.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="410,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Navigation And Access\GoToPage.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="PageNumber">
+                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="TransactionItem.SpecificContent.GetValueOrDefault(&quot;PageNo&quot;).ToString" />
+                    </InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation And Access\OpenWorkItem.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="410,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Navigation And Access\OpenWorkItem.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="WorkItemId">
+                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="TransactionItem.SpecificContent.GetValueOrDefault(&quot;WIID&quot;).ToString" />
+                    </InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation And Access\ClickWorkItemMenu.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="410,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Navigation And Access\ClickWorkItemMenu.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="MenuName">Download PDF Invoice</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Vendor PDF Workflow\DownloadPdf.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="410,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Vendor PDF Workflow\DownloadPdf.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="PdfPath">
+                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="PdfPath" />
+                    </InArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="PdfName">
+                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="PdfName" />
+                    </OutArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation And Access\GoBack.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="410,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Navigation And Access\GoBack.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Vendor PDF Workflow\OpenVendorPdf.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="410,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Vendor PDF Workflow\OpenVendorPdf.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <OutArgument x:TypeArguments="x:String" x:Key="VendorPdfText">
+                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="VendorPdfText" />
+                    </OutArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="PdfPath">
+                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="PdfPath" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="PdfName">
+                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="PdfName" />
+                    </InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Vendor PDF Workflow\GetVendorInfo.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="410,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Vendor PDF Workflow\GetVendorInfo.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="BreakTriggerScopeInArgument" />
+                    <InArgument x:TypeArguments="x:String" x:Key="VendorPdfText">
+                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="VendorPdfText" />
+                    </InArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="ItemDescription">
+                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="ItemDescription" />
+                    </OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="TaxId">
+                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="TaxId" />
+                    </OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="UntaxedAmount">
+                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="UntaxedAmount" />
+                    </OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="TaxAmount">
+                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="TaxAmount" />
+                    </OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="TotalAmount">
+                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="TotalAmount" />
+                    </OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="Currency">
+                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="Currency" />
+                    </OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="InvoiceDate">
+                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="InvoiceDate" />
+                    </OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="VendorName">
+                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="VendorName" />
+                    </OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="InvoiceId">
+                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="InvoiceId" />
+                    </OutArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation And Access\NavigateMenu.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="410,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Navigation And Access\NavigateMenu.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="NavigateMenuName">Home</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation And Access\ClickMenuItem.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="410,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Navigation And Access\ClickMenuItem.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="MenuName">Vendors</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="SubMenuName">Search for Vendor</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Search Vendor\SearchVendor.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="410,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Search Vendor\SearchVendor.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="VendorName">[VendorName]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="VendorTaxId">[TaxId]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Search Vendor\ExtractVendorSearchResult.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="410,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Search Vendor\ExtractVendorSearchResult.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <OutArgument x:TypeArguments="x:Boolean" x:Key="IsVendorExist">
+                      <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="IsVendorExist" />
+                    </OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="TaxId">
+                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="TaxId" />
+                    </OutArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="BreakTriggerScopeInArgument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <If Condition="[IsVendorExist]" sap:VirtualizedContainerService.HintSize="410,2726" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="376,1578" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation And Access\NavigateMenu.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Navigation And Access\NavigateMenu.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="NavigateMenuName">Home</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation And Access\ClickMenuItem.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="Navigation And Access\ClickMenuItem.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="MenuName">Invoices</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="SubMenuName">Add Invoice Details</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fill And Update\AddInvoiceDetails.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="Fill And Update\AddInvoiceDetails.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="InvoiceNumber">[InvoiceId]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="TaxId">[TaxId]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="Currency">[Currency]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="ItemDescription">[ItemDescription]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="UntaxedAmount">[UntaxedAmount]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="TaxAmount">[TaxAmount]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="TotalAmount">[TotalAmount]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="InvoiceDate">[InvoiceDate]</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation And Access\NavigateMenu.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Navigation And Access\NavigateMenu.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="NavigateMenuName">Home</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation And Access\ClickMenuItem.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="Navigation And Access\ClickMenuItem.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="MenuName">Work Items</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="SubMenuName" />
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation And Access\GoToPage.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="Navigation And Access\GoToPage.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="PageNumber">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="TransactionItem.SpecificContent.GetValueOrDefault(&quot;PageNo&quot;).ToString" />
+                          </InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation And Access\OpenWorkItem.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Navigation And Access\OpenWorkItem.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="WorkItemId">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="TransactionItem.SpecificContent.GetValueOrDefault(&quot;WIID&quot;).ToString" />
+                          </InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation And Access\ClickWorkItemMenu.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="Navigation And Access\ClickWorkItemMenu.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="MenuName">Update Work Item</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fill And Update\UpdateWorkItem.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="Fill And Update\UpdateWorkItem.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="Comment">["Invoice " + InvoiceId+ "Has added successfully"]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="SetStatus">Completed</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation And Access\NavigateMenu.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="Navigation And Access\NavigateMenu.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="NavigateMenuName">Home</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence sap:VirtualizedContainerService.HintSize="376,966" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation And Access\NavigateMenu.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="Navigation And Access\NavigateMenu.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="NavigateMenuName">Home</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation And Access\ClickMenuItem.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Navigation And Access\ClickMenuItem.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="MenuName">Work Items</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="SubMenuName" />
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation And Access\GoToPage.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" UnSafe="False" WorkflowFileName="Navigation And Access\GoToPage.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="PageNumber">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="TransactionItem.SpecificContent.GetValueOrDefault(&quot;PageNo&quot;).ToString" />
+                          </InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation And Access\OpenWorkItem.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="Navigation And Access\OpenWorkItem.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="WorkItemId">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="TransactionItem.SpecificContent.GetValueOrDefault(&quot;WIID&quot;).ToString" />
+                          </InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Fill And Update\UpdateWorkItem.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_27" UnSafe="False" WorkflowFileName="Fill And Update\UpdateWorkItem.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="Comment">["Vendor with TaxID" + TaxId +"not present in the system"]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="SetStatus">Rejected</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Navigation And Access\NavigateMenu.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_28" UnSafe="False" WorkflowFileName="Navigation And Access\NavigateMenu.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="NavigateMenuName">Home</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                    </Sequence>
+                  </If.Else>
+                </If>
+                <ui:SetTransactionStatus ContinueOnError="{x:Null}" Reason="{x:Null}" ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status" ErrorType="Business" FolderPath="theonewhoknocks123@hotmail.com's workspace" sap:VirtualizedContainerService.HintSize="410,191" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_1" Status="Successful" TransactionItem="[TransactionItem]">
                   <ui:SetTransactionStatus.Analytics>
                     <scg:Dictionary x:TypeArguments="x:String, InArgument" />
                   </ui:SetTransactionStatus.Analytics>
@@ -110,7 +369,7 @@
                     <scg:Dictionary x:TypeArguments="x:String, InArgument" />
                   </ui:SetTransactionStatus.Output>
                 </ui:SetTransactionStatus>
-                <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Transaction Item" FolderPath="theonewhoknocks123@hotmail.com's workspace" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="GetQueueItem_2" QueueType="Filtered_Work_Items" TransactionItem="[TransactionItem]" />
+                <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Transaction Item" FolderPath="theonewhoknocks123@hotmail.com's workspace" sap:VirtualizedContainerService.HintSize="410,143" sap2010:WorkflowViewState.IdRef="GetQueueItem_2" QueueType="Filtered_Work_Items" TransactionItem="[TransactionItem]" />
               </Sequence>
             </ui:InterruptibleWhile.Body>
           </ui:InterruptibleWhile>
@@ -127,5 +386,6 @@
         </Sequence>
       </If.Else>
     </If>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="584,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Performer sequence ended&quot;]" />
   </Sequence>
 </Activity>

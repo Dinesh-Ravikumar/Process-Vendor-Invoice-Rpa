@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OZA3ttuEKM0nBNC1GuOO6xYMFsIXrvGu257IF5osZWzHTXigk+w6vkdgEU86aq9arfqaWSORQ8TYxDAGbhBLJA==",
+  "dgSpecHash": "PJmdJ7PD6ZPAscNeUQrzqWwW5U+qzVL/v7AdEdvyg585CObD+uZHfyHXAlXr4duQj/viEy6+LdhDKsJg/KkFIg==",
   "success": true,
   "projectFilePath": "C:\\Users\\dineshkumar.ravikuma\\Documents\\UiPath\\AcmeVendorInvoice\\.local\\",
   "expectedPackageFiles": [
@@ -276,20 +276,20 @@
     "C:\\Users\\dineshkumar.ravikuma\\.nuget\\packages\\uipath.connectionclient\\1.4.1\\uipath.connectionclient.1.4.1.nupkg.sha512",
     "C:\\Users\\dineshkumar.ravikuma\\.nuget\\packages\\uipath.documentprocessing.contracts\\1.21.0\\uipath.documentprocessing.contracts.1.21.0.nupkg.sha512",
     "C:\\Users\\dineshkumar.ravikuma\\.nuget\\packages\\uipath.documentunderstanding.digitizer\\3.2.0\\uipath.documentunderstanding.digitizer.3.2.0.nupkg.sha512",
-    "C:\\Users\\dineshkumar.ravikuma\\AppData\\Local\\UiPath\\NugetFallbackFolder\\uipath.excel.activities\\2.20.0-preview\\uipath.excel.activities.2.20.0-preview.nupkg.sha512",
-    "C:\\Users\\dineshkumar.ravikuma\\AppData\\Local\\UiPath\\NugetFallbackFolder\\uipath.imageprocessing\\23.4.0\\uipath.imageprocessing.23.4.0.nupkg.sha512",
+    "C:\\Users\\dineshkumar.ravikuma\\.nuget\\packages\\uipath.excel.activities\\2.20.0-preview\\uipath.excel.activities.2.20.0-preview.nupkg.sha512",
+    "C:\\Users\\dineshkumar.ravikuma\\.nuget\\packages\\uipath.imageprocessing\\23.4.0\\uipath.imageprocessing.23.4.0.nupkg.sha512",
     "C:\\Users\\dineshkumar.ravikuma\\.nuget\\packages\\uipath.mail.activities\\1.18.2\\uipath.mail.activities.1.18.2.nupkg.sha512",
-    "C:\\Users\\dineshkumar.ravikuma\\AppData\\Local\\UiPath\\NugetFallbackFolder\\uipath.ocr.activities\\3.15.0\\uipath.ocr.activities.3.15.0.nupkg.sha512",
+    "C:\\Users\\dineshkumar.ravikuma\\.nuget\\packages\\uipath.ocr.activities\\3.15.0\\uipath.ocr.activities.3.15.0.nupkg.sha512",
     "C:\\Users\\dineshkumar.ravikuma\\.nuget\\packages\\uipath.ocr.contracts\\2.14.0\\uipath.ocr.contracts.2.14.0.nupkg.sha512",
     "C:\\Users\\dineshkumar.ravikuma\\.nuget\\packages\\uipath.pdf.activities\\3.14.0\\uipath.pdf.activities.3.14.0.nupkg.sha512",
     "C:\\Users\\dineshkumar.ravikuma\\.nuget\\packages\\uipath.platform\\23.4.0\\uipath.platform.23.4.0.nupkg.sha512",
-    "C:\\Users\\dineshkumar.ravikuma\\AppData\\Local\\UiPath\\NugetFallbackFolder\\uipath.system.activities\\23.4.1-preview\\uipath.system.activities.23.4.1-preview.nupkg.sha512",
-    "C:\\Users\\dineshkumar.ravikuma\\AppData\\Local\\UiPath\\NugetFallbackFolder\\uipath.system.runtime.windows\\23.4.1-preview\\uipath.system.runtime.windows.23.4.1-preview.nupkg.sha512",
+    "C:\\Users\\dineshkumar.ravikuma\\.nuget\\packages\\uipath.system.activities\\23.4.1-preview\\uipath.system.activities.23.4.1-preview.nupkg.sha512",
+    "C:\\Users\\dineshkumar.ravikuma\\.nuget\\packages\\uipath.system.runtime.windows\\23.4.1-preview\\uipath.system.runtime.windows.23.4.1-preview.nupkg.sha512",
     "C:\\Users\\dineshkumar.ravikuma\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\uipath.telemetry.client.1.5.3.nupkg.sha512",
-    "C:\\Users\\dineshkumar.ravikuma\\AppData\\Local\\UiPath\\NugetFallbackFolder\\uipath.testing.activities\\23.4.0-preview\\uipath.testing.activities.23.4.0-preview.nupkg.sha512",
+    "C:\\Users\\dineshkumar.ravikuma\\.nuget\\packages\\uipath.testing.activities\\23.4.0-preview\\uipath.testing.activities.23.4.0-preview.nupkg.sha512",
     "C:\\Users\\dineshkumar.ravikuma\\.nuget\\packages\\uipath.uiautomation.activities\\23.4.2-preview\\uipath.uiautomation.activities.23.4.2-preview.nupkg.sha512",
     "C:\\Users\\dineshkumar.ravikuma\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\23.4.2-preview\\uipath.uiautomation.activities.runtime.23.4.2-preview.nupkg.sha512",
-    "C:\\Users\\dineshkumar.ravikuma\\AppData\\Local\\UiPath\\NugetFallbackFolder\\uipath.vision\\3.10.0\\uipath.vision.3.10.0.nupkg.sha512"
+    "C:\\Users\\dineshkumar.ravikuma\\.nuget\\packages\\uipath.vision\\3.10.0\\uipath.vision.3.10.0.nupkg.sha512"
   ],
   "logs": []
 }
