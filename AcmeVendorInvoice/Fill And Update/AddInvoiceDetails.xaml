@@ -44,7 +44,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1222,5984</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1219,5812</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AddInvoiceDetails_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -79,6 +79,8 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.CV.Activities.Interfaces</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -131,9 +133,10 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AddInvoiceDetails" sap:VirtualizedContainerService.HintSize="506,5919" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AddInvoiceDetails" sap:VirtualizedContainerService.HintSize="506,5747" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:Image" Name="Image" />
     </Sequence.Variables>
@@ -142,8 +145,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="444,94" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Add Invoice Details Sequence started&quot;]" />
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DisplayName="CV Screen Scope 'BODY'" sap:VirtualizedContainerService.HintSize="444,4366" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="444,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Add Invoice Details Sequence started&quot;]" />
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DisplayName="CV Screen Scope 'BODY'" sap:VirtualizedContainerService.HintSize="444,4174" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -153,8 +156,8 @@
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="IsPageExist" />
             </Sequence.Variables>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,94" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Trace" Message="[&quot;Finding the current page is in the expected page&quot;]" />
-            <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Text 'Invoices - Add Invoice Details' (382,93,471,31)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Home / Invoices - Add Invoice Details' (396,171,243,13)&quot;]" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Text" sap:VirtualizedContainerService.HintSize="410,138" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_1" InformativeScreenshot="a9fda8bfae60574f0da3d3e3ccb4341c" NumberOfScrolls="2" Result="[IsPageExist]" ScrollDirection="None" Version="V6">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,92" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Trace" Message="[&quot;Finding the current page is in the expected page&quot;]" />
+            <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Text 'Invoices - Add Invoice Details' (382,93,471,31)&quot; +&#xA;&quot;Anchor: Text 'Home / Invoices - Add Invoice Details' (396,171,243,13)&quot;]" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Text" sap:VirtualizedContainerService.HintSize="410,137" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_1" InformativeScreenshot="a9fda8bfae60574f0da3d3e3ccb4341c" NumberOfScrolls="2" Result="[IsPageExist]" ScrollDirection="None" Version="V6">
               <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="59b94db7-25ba-43d8-baaf-0d9bd8d5813a">
                   <uc:CvDescriptor.Anchors>
@@ -168,8 +171,8 @@
                 </uc:CvDescriptor>
               </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
             </p:CvElementExistsWithDescriptor>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,94" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Trace" Message="[&quot;passing Condition for availability and non availability of the page&quot;]" />
-            <If Condition="[IsPageExist]" sap:VirtualizedContainerService.HintSize="410,3630" sap2010:WorkflowViewState.IdRef="If_1">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,92" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Trace" Message="[&quot;passing Condition for availability and non availability of the page&quot;]" />
+            <If Condition="[IsPageExist]" sap:VirtualizedContainerService.HintSize="410,3443" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -177,14 +180,14 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,3297" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence sap:VirtualizedContainerService.HintSize="376,3261" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Trace" Message="[&quot;Filling the text fields, entering invoice number&quot;]" />
-                  <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (451,289,486,37)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Invoice Number:' (451,269,110,13)&quot;]" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="ecd017cf43383280739e8f07a131b0c7" NumberOfScrolls="2" ScrollDirection="None" Text="[InvoiceNumber]" Version="V6">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Trace" Message="[&quot;Filling the text fields, entering invoice number&quot;]" />
+                  <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (451,289,486,37)&quot; +&#xA;&quot;Anchor: Text 'Invoice Number:' (451,269,110,13)&quot;]" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="ecd017cf43383280739e8f07a131b0c7" NumberOfScrolls="2" ScrollDirection="None" Text="[InvoiceNumber]" Version="V6">
                     <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                       <uc:CvDescriptor Id="e03c7db8-002b-4172-96ca-817f22022080">
                         <uc:CvDescriptor.Anchors>
@@ -208,8 +211,8 @@
                       </ui:Target>
                     </p:CvTypeIntoWithDescriptor.Target>
                   </p:CvTypeIntoWithDescriptor>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Trace" Message="[&quot;Entering Tax Id&quot;]" />
-                  <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (451,363,487,37)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Vendor TaxID:' (449,343,95,13)&quot;]" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_2" InformativeScreenshot="d5309730108fbfbf6a083d1bf7f4798d" NumberOfScrolls="2" ScrollDirection="None" Text="[TaxId]" Version="V6">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Trace" Message="[&quot;Entering Tax Id&quot;]" />
+                  <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (451,363,487,37)&quot; +&#xA;&quot;Anchor: Text 'Vendor TaxID:' (449,343,95,13)&quot;]" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_2" InformativeScreenshot="d5309730108fbfbf6a083d1bf7f4798d" NumberOfScrolls="2" ScrollDirection="None" Text="[TaxId]" Version="V6">
                     <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                       <uc:CvDescriptor Id="68958901-e448-4977-9ae3-d6f907ef26d3">
                         <uc:CvDescriptor.Anchors>
@@ -233,8 +236,8 @@
                       </ui:Target>
                     </p:CvTypeIntoWithDescriptor.Target>
                   </p:CvTypeIntoWithDescriptor>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Trace" Message="[&quot;Entering Date&quot;]" />
-                  <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (450,437,487,38)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Date:' (451,417,35,13)&quot;]" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_3" InformativeScreenshot="be59ea308f6591a512daec732de83abd" NumberOfScrolls="2" ScrollDirection="None" Text="[InvoiceDate]" Version="V6">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Trace" Message="[&quot;Entering Date&quot;]" />
+                  <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (450,437,487,38)&quot; +&#xA;&quot;Anchor: Text 'Date:' (451,417,35,13)&quot;]" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_3" InformativeScreenshot="be59ea308f6591a512daec732de83abd" NumberOfScrolls="2" ScrollDirection="None" Text="[InvoiceDate]" Version="V6">
                     <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                       <uc:CvDescriptor Id="3c8e7ed0-e49f-4e2c-ac5a-28a63abeac70">
                         <uc:CvDescriptor.Anchors>
@@ -258,8 +261,8 @@
                       </ui:Target>
                     </p:CvTypeIntoWithDescriptor.Target>
                   </p:CvTypeIntoWithDescriptor>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Trace" Message="[&quot;Entering currency&quot;]" />
-                  <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (451,511,487,38)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Currency:' (450,491,68,16)&quot;]" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_4" InformativeScreenshot="e497cd8dd972136d56298a25dbabaefe" NumberOfScrolls="2" ScrollDirection="None" Text="[Currency]" Version="V6">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Trace" Message="[&quot;Entering currency&quot;]" />
+                  <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (451,511,487,38)&quot; +&#xA;&quot;Anchor: Text 'Currency:' (450,491,68,16)&quot;]" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_4" InformativeScreenshot="e497cd8dd972136d56298a25dbabaefe" NumberOfScrolls="2" ScrollDirection="None" Text="[Currency]" Version="V6">
                     <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                       <uc:CvDescriptor Id="18049598-9515-4ca9-8a34-93ba5ad3ba34">
                         <uc:CvDescriptor.Anchors>
@@ -283,8 +286,8 @@
                       </ui:Target>
                     </p:CvTypeIntoWithDescriptor.Target>
                   </p:CvTypeIntoWithDescriptor>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Trace" Message="[&quot;Entering Item Description&quot;]" />
-                  <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (451,586,487,37)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Item Description:' (451,565,115,16)&quot;]" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_5" InformativeScreenshot="b4c9db9e2fd2a11fcaff0f04a813532b" NumberOfScrolls="2" ScrollDirection="None" Text="[ItemDescription]" Version="V6">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Trace" Message="[&quot;Entering Item Description&quot;]" />
+                  <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (451,586,487,37)&quot; +&#xA;&quot;Anchor: Text 'Item Description:' (451,565,115,16)&quot;]" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_5" InformativeScreenshot="b4c9db9e2fd2a11fcaff0f04a813532b" NumberOfScrolls="2" ScrollDirection="None" Text="[ItemDescription]" Version="V6">
                     <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                       <uc:CvDescriptor Id="565b5351-c572-4920-805a-dd6a30e0e1dd">
                         <uc:CvDescriptor.Anchors>
@@ -308,8 +311,8 @@
                       </ui:Target>
                     </p:CvTypeIntoWithDescriptor.Target>
                   </p:CvTypeIntoWithDescriptor>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Trace" Message="[&quot;Entering Untaxed amount&quot;]" />
-                  <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (450,659,488,37)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Untaxed Amount:' (451,639,117,13)&quot;]" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_6" InformativeScreenshot="f43a8355f3deff6d9bf3b86c167dc133" NumberOfScrolls="2" ScrollDirection="None" Text="[UntaxedAmount]" Version="V6">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Trace" Message="[&quot;Entering Untaxed amount&quot;]" />
+                  <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (450,659,488,37)&quot; +&#xA;&quot;Anchor: Text 'Untaxed Amount:' (451,639,117,13)&quot;]" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_6" InformativeScreenshot="f43a8355f3deff6d9bf3b86c167dc133" NumberOfScrolls="2" ScrollDirection="None" Text="[UntaxedAmount]" Version="V6">
                     <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                       <uc:CvDescriptor Id="1478bb94-2d9f-4a01-a132-71868e4ba54e">
                         <uc:CvDescriptor.Anchors>
@@ -333,8 +336,8 @@
                       </ui:Target>
                     </p:CvTypeIntoWithDescriptor.Target>
                   </p:CvTypeIntoWithDescriptor>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Trace" Message="[&quot;Entering tax amount&quot;]" />
-                  <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (451,733,487,38)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Tax Amount:' (451,713,84,13)&quot;]" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_7" InformativeScreenshot="fdd3d7aca4024c80f0f154266e83261f" NumberOfScrolls="2" ScrollDirection="None" Text="[TaxAmount]" Version="V6">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Trace" Message="[&quot;Entering tax amount&quot;]" />
+                  <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (451,733,487,38)&quot; +&#xA;&quot;Anchor: Text 'Tax Amount:' (451,713,84,13)&quot;]" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_7" InformativeScreenshot="fdd3d7aca4024c80f0f154266e83261f" NumberOfScrolls="2" ScrollDirection="None" Text="[TaxAmount]" Version="V6">
                     <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                       <uc:CvDescriptor Id="0745dde8-ae6e-4e4d-a91c-2bd463739583">
                         <uc:CvDescriptor.Anchors>
@@ -358,8 +361,8 @@
                       </ui:Target>
                     </p:CvTypeIntoWithDescriptor.Target>
                   </p:CvTypeIntoWithDescriptor>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Trace" Message="[&quot;Entering Total amount&quot;]" />
-                  <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (451,807,487,37)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Total Amount:' (451,787,94,13)&quot;]" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_8" InformativeScreenshot="efb2142e580070f95a468490602c5205" NumberOfScrolls="2" ScrollDirection="None" Text="[TotalAmount]" Version="V6">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Trace" Message="[&quot;Entering Total amount&quot;]" />
+                  <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (451,807,487,37)&quot; +&#xA;&quot;Anchor: Text 'Total Amount:' (451,787,94,13)&quot;]" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_8" InformativeScreenshot="efb2142e580070f95a468490602c5205" NumberOfScrolls="2" ScrollDirection="None" Text="[TotalAmount]" Version="V6">
                     <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                       <uc:CvDescriptor Id="eac2e948-90df-4a4c-8f66-540039e9c6cf">
                         <uc:CvDescriptor.Anchors>
@@ -383,8 +386,8 @@
                       </ui:Target>
                     </p:CvTypeIntoWithDescriptor.Target>
                   </p:CvTypeIntoWithDescriptor>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Trace" Message="[&quot;Submitting all the invoice details by clicking submit button&quot;]" />
-                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (450,857,148,36)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Add Invoice Details' (462,868,123,13)&quot;]" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="e6669157039582ed92a9e810ec6fd1dc" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Trace" Message="[&quot;Submitting all the invoice details by clicking submit button&quot;]" />
+                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (450,857,148,36)&quot; +&#xA;&quot;Anchor: Text 'Add Invoice Details' (462,868,123,13)&quot;]" DesignTimeCacheId="d62ea13a-dd95-457d-b33c-3b8e3ddea5ca" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="e6669157039582ed92a9e810ec6fd1dc" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
                     <p:CvClickWithDescriptor.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -421,19 +424,22 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,182" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence sap:VirtualizedContainerService.HintSize="376,180" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[&quot;ERROR_FINDING_PAGE&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[&quot;ERROR_FINDING_PAGE&quot;]" />
                 </Sequence>
               </If.Else>
             </If>
           </Sequence>
         </ActivityAction>
       </p:CVScope.Body>
+      <p:CVScope.DesignTimeCache>
+        <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+      </p:CVScope.DesignTimeCache>
       <p:CVScope.DesignTimeCacheContainer>
         <uc:CvCacheContainer>
           <uc:CvCacheContainer.Caches>
@@ -643,7 +649,7 @@
         <InArgument x:TypeArguments="x:Boolean" />
       </p:CVScope.UseLocalServer>
     </p:CVScope>
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="2f045da4-40cf-4513-ba37-cf81bf8bb5ec" DisplayName="CV Screen Scope 'BODY'" sap:VirtualizedContainerService.HintSize="444,1134" sap2010:WorkflowViewState.IdRef="CVScope_2" SendOnPremData="False" Version="V6">
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="2f045da4-40cf-4513-ba37-cf81bf8bb5ec" DisplayName="CV Screen Scope 'BODY'" sap:VirtualizedContainerService.HintSize="444,1158" sap2010:WorkflowViewState.IdRef="CVScope_2" SendOnPremData="False" Version="V6">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -653,8 +659,8 @@
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="IsInvoiceAdded" />
             </Sequence.Variables>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,94" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Trace" Message="[&quot;Checking if the invoice is added successfully&quot;]" />
-            <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Text 'The performed operation was completely successful.)' (458,218,334,17)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Success' (389,93,138,31)&quot; +&#xD;&#xA;&quot;Anchor: Text 'ACME System 1' (388,16,132,20)&quot;]" DesignTimeCacheId="2f045da4-40cf-4513-ba37-cf81bf8bb5ec" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Text" sap:VirtualizedContainerService.HintSize="410,138" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_2" InformativeScreenshot="6df66ff5fefe541860148d8db1c8ffff" NumberOfScrolls="2" Result="[IsInvoiceAdded]" ScrollDirection="None" Version="V6">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,92" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Trace" Message="[&quot;Checking if the invoice is added successfully&quot;]" />
+            <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Text 'The performed operation was completely successful.)' (458,218,334,17)&quot; +&#xA;&quot;Anchor: Text 'Success' (389,93,138,31)&quot; +&#xA;&quot;Anchor: Text 'ACME System 1' (388,16,132,20)&quot;]" DesignTimeCacheId="2f045da4-40cf-4513-ba37-cf81bf8bb5ec" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Text" sap:VirtualizedContainerService.HintSize="410,137" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_2" InformativeScreenshot="6df66ff5fefe541860148d8db1c8ffff" NumberOfScrolls="2" Result="[IsInvoiceAdded]" ScrollDirection="None" Version="V6">
               <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="efd61958-53bf-4f81-be87-8eacc413ecb3">
                   <uc:CvDescriptor.Anchors>
@@ -669,31 +675,34 @@
                 </uc:CvDescriptor>
               </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
             </p:CvElementExistsWithDescriptor>
-            <If Condition="[IsInvoiceAdded]" sap:VirtualizedContainerService.HintSize="410,515" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[IsInvoiceAdded]" sap:VirtualizedContainerService.HintSize="410,542" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,182" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence sap:VirtualizedContainerService.HintSize="376,180" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Invoice Added Successfully&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Invoice Added Successfully&quot;]" />
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,182" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence sap:VirtualizedContainerService.HintSize="376,180" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error" Message="[&quot;ERROR_WHILE_SUBMITTING_INVOICE&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error" Message="[&quot;ERROR_WHILE_SUBMITTING_INVOICE&quot;]" />
                 </Sequence>
               </If.Else>
             </If>
           </Sequence>
         </ActivityAction>
       </p:CVScope.Body>
+      <p:CVScope.DesignTimeCache>
+        <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+      </p:CVScope.DesignTimeCache>
       <p:CVScope.DesignTimeCacheContainer>
         <uc:CvCacheContainer>
           <uc:CvCacheContainer.Caches>
@@ -767,6 +776,6 @@
         <InArgument x:TypeArguments="x:Boolean" />
       </p:CVScope.UseLocalServer>
     </p:CVScope>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="444,94" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Add Invoice Details Sequence Ended&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="444,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Add Invoice Details Sequence Ended&quot;]" />
   </Sequence>
 </Activity>

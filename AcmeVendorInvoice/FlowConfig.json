@@ -1,0 +1,8 @@
+﻿{
+	"Workspace": "theonewhoknocks123@hotmail.com's workspace",
+	"PdfPath": "C:\\AcmePdf",
+	"CredentialsAssetName": "AcmeCredentials",
+	"QueueName": "Filtered_Work_Items",
+	"BotType": "Dispatcher",
+	"AcmeUrl": "https://acme-test.uipath.com/login"
+}

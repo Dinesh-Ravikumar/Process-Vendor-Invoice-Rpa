@@ -22,12 +22,17 @@
       "Path": "Generic/LoginAcme.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "Config&Sequence_1",
+        "FlowConfigString&Sequence_1",
         "isLoginPageExist&Sequence_3",
         "Password&Sequence_1",
         "Image&Sequence_1",
         "UserName&Sequence_1"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "WorkspaceName",
+        "CredentialsAssetName"
+      ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     },
@@ -35,21 +40,10 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "Config&Sequence_1",
+        "FlowConfigString&Sequence_1",
         "ExtractDataTable&Sequence_1",
-        "FilteredDataTable&Sequence_1",
-        "PdfName&Sequence_3",
-        "VendorPdfText&Sequence_3",
-        "TaxId&Sequence_3",
-        "Currency&Sequence_3",
-        "ItemDescription&Sequence_3",
-        "UntaxedAmount&Sequence_3",
-        "TaxAmount&Sequence_3",
-        "TotalAmount&Sequence_3",
-        "InvoiceDate&Sequence_3",
-        "VendorName&Sequence_3",
-        "IsVendorExist&Sequence_3",
-        "PdfPath&Sequence_3",
-        "InvoiceId&Sequence_3"
+        "FilteredDataTable&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": null,
@@ -279,9 +273,14 @@
     {
       "Path": "Dispatcher/Dispatcher.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "Config&Sequence_1",
+        "FlowConfigString&Sequence_1",
+        "ExtractedDataTable&Sequence_1",
+        "FilteredDataTable&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [
-        "FilteredDataTable"
+        "Config"
       ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
@@ -290,6 +289,8 @@
       "Path": "Performer/Performer.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "FlowConfigString&Sequence_1",
+        "Config&Sequence_1",
         "VendorPdfText&Sequence_2",
         "PdfName&Sequence_2",
         "PdfPath&Sequence_2",
@@ -306,7 +307,9 @@
         "QueueItems&Sequence_1",
         "TransactionItem&Sequence_1"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "Config"
+      ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     },
@@ -315,6 +318,7 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
+        "Config",
         "FilteredDataTable",
         "BotType"
       ],

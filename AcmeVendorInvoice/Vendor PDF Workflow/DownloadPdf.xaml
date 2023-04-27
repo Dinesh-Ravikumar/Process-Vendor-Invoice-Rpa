@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1222,4993</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>658,6210</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DownloadPdf_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -105,7 +105,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This sequence downloads the pdf and stores it in the desired path " DisplayName="DownloadPdf" sap:VirtualizedContainerService.HintSize="668,4928" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="This sequence downloads the pdf and stores it in the desired path " DisplayName="DownloadPdf" sap:VirtualizedContainerService.HintSize="668,6145" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:Image" Name="Image" />
     </Sequence.Variables>
@@ -116,9 +116,10 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="606,94" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Download pdf Sequence started&quot;]" />
-    <Sequence DisplayName="Click Download Button" sap:VirtualizedContainerService.HintSize="606,4518" sap2010:WorkflowViewState.IdRef="Sequence_20">
+    <Sequence DisplayName="Click Download Button" sap:VirtualizedContainerService.HintSize="606,5735" sap2010:WorkflowViewState.IdRef="Sequence_20">
       <Sequence.Variables>
         <Variable x:TypeArguments="ui:Window" Name="Window" />
+        <Variable x:TypeArguments="x:Boolean" Name="IsFileSaved" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -416,7 +417,7 @@
         </ui:WindowScope.Body>
       </ui:WindowScope>
       <ui:MaximizeWindow DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="544,25" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" Window="[Window]" />
-      <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" sap2010:Annotation.AnnotationText="Scren scope for save as window  Which comes after the download button invoked" CvMethod="ElementDetection, OCR" DesignTimeCacheId="debf8092-6c7d-42de-b6ca-3b8623101a3e" DisplayName="CV Screen Scope 'chrome.exe  Save As'" sap:VirtualizedContainerService.HintSize="544,1935" sap2010:WorkflowViewState.IdRef="CVScope_4" SendOnPremData="False" Version="V6">
+      <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" sap2010:Annotation.AnnotationText="Scren scope for save as window  Which comes after the download button invoked" CvMethod="ElementDetection, OCR" DesignTimeCacheId="debf8092-6c7d-42de-b6ca-3b8623101a3e" DisplayName="CV Screen Scope 'chrome.exe  Save As'" sap:VirtualizedContainerService.HintSize="544,3152" sap2010:WorkflowViewState.IdRef="CVScope_4" SendOnPremData="False" Version="V6">
         <p:CVScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -426,8 +427,8 @@
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Boolean" Name="IsSaveAsWindowExist" />
               </Sequence.Variables>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,94" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Trace" Message="[&quot;Checking if the save as pops up after clicking the download button&quot;]" />
-              <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" sap2010:Annotation.AnnotationText="Checks if the save as winow pops out" Descriptor="[&quot;Target: Icon (1,4,20,21)&quot; +&#xA;&quot;Anchor: Text 'Save As' (23,9,42,12)&quot;]" DesignTimeCacheId="debf8092-6c7d-42de-b6ca-3b8623101a3e" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Icon" sap:VirtualizedContainerService.HintSize="410,169" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_4" InformativeScreenshot="663269aee98ea2d22efc143d2aedf446" NumberOfScrolls="2" Result="[IsSaveAsWindowExist]" ScrollDirection="None" Version="V6">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,94" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Trace" Message="[&quot;Checking if the save as pops up after clicking the download button&quot;]" />
+              <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" sap2010:Annotation.AnnotationText="Checks if the save as winow pops out" Descriptor="[&quot;Target: Icon (1,4,20,21)&quot; +&#xA;&quot;Anchor: Text 'Save As' (23,9,42,12)&quot;]" DesignTimeCacheId="debf8092-6c7d-42de-b6ca-3b8623101a3e" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Icon" sap:VirtualizedContainerService.HintSize="510,169" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_4" InformativeScreenshot="663269aee98ea2d22efc143d2aedf446" NumberOfScrolls="2" Result="[IsSaveAsWindowExist]" ScrollDirection="None" Version="V6">
                 <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
                   <uc:CvDescriptor Id="84296eb7-f56b-428e-a27c-3fb39c6d859c">
                     <uc:CvDescriptor.Anchors>
@@ -446,24 +447,51 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </p:CvElementExistsWithDescriptor>
-              <If sap2010:Annotation.AnnotationText="Condition for checking if exists modifies the path and saves the pdf file if not logs an error" Condition="[IsSaveAsWindowExist]" sap:VirtualizedContainerService.HintSize="410,1241" sap2010:WorkflowViewState.IdRef="If_6">
+              <If sap2010:Annotation.AnnotationText="Condition for checking if exists modifies the path and saves the pdf file if not logs an error" Condition="[IsSaveAsWindowExist]" sap:VirtualizedContainerService.HintSize="510,2471" sap2010:WorkflowViewState.IdRef="If_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,832" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <Sequence sap:VirtualizedContainerService.HintSize="476,2062" sap2010:WorkflowViewState.IdRef="Sequence_14">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="PdfPathTextBox" />
+                      <Variable x:TypeArguments="x:Boolean" Name="IsFileExist" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Trace" Message="[&quot;entering path in the path text box&quot;]" />
-                    <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Types into the path text box" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (125,365,625,25)&quot; +&#xD;&#xA;&quot;Anchor: Text 'File name:' (66,371,55,12)&quot;]" DesignTimeCacheId="b9e22b15-eebc-41ac-9fab-ed92badc3948" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_2" InformativeScreenshot="5e7b33111462d40b90bbe048c6d5030f" NumberOfScrolls="2" ScrollDirection="None" Text="[PdfPath + &quot;\&quot; + PdfName]" Version="V6">
+                    <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists" Exists="[IsFileExist]" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[PdfPath + &quot;\&quot; + PdfName]" PathType="File" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,94" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Info" Message="[IsFileExist]" />
+                    <If Condition="[IsFileExist]" sap:VirtualizedContainerService.HintSize="434,802" sap2010:WorkflowViewState.IdRef="If_7">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,437" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Trace" Message="[&quot;Deleting Existing file&quot;]" />
+                          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="334,81" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[PdfPath + &quot;\&quot; + PdfName]" />
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Trace" Message="[&quot;File Deleted, saving pdf&quot;]" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,182" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_26" Level="Trace" Message="[&quot;File doesnt exist, saving file&quot;]" />
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,94" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Trace" Message="[&quot;entering path and file name included in the file name text box&quot;]" />
+                    <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Types into the path text box" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (125,365,625,25)&quot; +&#xA;&quot;Anchor: Text 'File name:' (66,371,55,12)&quot;]" DesignTimeCacheId="b9e22b15-eebc-41ac-9fab-ed92badc3948" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_2" InformativeScreenshot="5e7b33111462d40b90bbe048c6d5030f" NumberOfScrolls="2" ScrollDirection="None" Text="[PdfPath + &quot;\&quot; + PdfName]" Version="V6">
                       <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                         <uc:CvDescriptor Id="4dc88d95-ead2-4531-a247-61ca3a183ebc">
                           <uc:CvDescriptor.Anchors>
@@ -492,8 +520,8 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </p:CvTypeIntoWithDescriptor>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Trace" Message="[&quot;submitting path and name&quot;]" />
-                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Clicks on the save button to the save the pdf file" ClickType="CLICK_SINGLE" DelayMS="4000" Descriptor="[&quot;Target: Button (1700,995,87,25)&quot; +&#xA;&quot;Anchor: Text 'Save' (1731,1000,26,12)&quot;]" DesignTimeCacheId="debf8092-6c7d-42de-b6ca-3b8623101a3e" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_6" InformativeScreenshot="b1e1d7c1722b618f73255ca6df7c83ef" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,94" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Trace" Message="[&quot;submitting path and name&quot;]" />
+                    <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Clicks on the save button to the save the pdf file" ClickType="CLICK_SINGLE" DelayMS="4000" Descriptor="[&quot;Target: Button (1700,995,87,25)&quot; +&#xA;&quot;Anchor: Text 'Save' (1731,1000,26,12)&quot;]" DesignTimeCacheId="debf8092-6c7d-42de-b6ca-3b8623101a3e" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_6" InformativeScreenshot="b1e1d7c1722b618f73255ca6df7c83ef" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
                       <p:CvClickWithDescriptor.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -532,6 +560,14 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </p:CvClickWithDescriptor>
+                    <Assign sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Boolean">[IsFileSaved]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                      </Assign.Value>
+                    </Assign>
                   </Sequence>
                 </If.Then>
                 <If.Else>
@@ -554,7 +590,7 @@
         <p:CVScope.DesignTimeCacheContainer>
           <uc:CvCacheContainer>
             <uc:CvCacheContainer.Caches>
-              <scg:List x:TypeArguments="uc:CVCache" Capacity="3">
+              <scg:List x:TypeArguments="uc:CVCache" Capacity="2">
                 <uc:CVCache DataSent="False" DisplayName="Screen CV Element Exists - 'Sa (Main)" Id="debf8092-6c7d-42de-b6ca-3b8623101a3e" InformativeScreenshot="352b5b29c3faf1d57fa1c4cadb274b6f" LogicalPosition="7, 0" OcrText="Save As X &gt; This PC &gt; Local Disk (C:) &gt; AcmePdf v Search AcmePdf Organize New folder ? Name Date modified Type Size Quick access Desktop No items match your search. Downloads Documents Pictures AcmePdf :: Local Disk (C:) Music Videos OneDrive This PC Network File name: Invoice-463453 v Save as type: PDF File v ^ Hide Folders Save Cancel" Position="7, 0" ScreenshotGuid="70a7338b-1700-4736-9e61-9061d91e08be" ServerVersion="1">
                   <uc:CVCache.CvAnchorRelations>
                     <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
