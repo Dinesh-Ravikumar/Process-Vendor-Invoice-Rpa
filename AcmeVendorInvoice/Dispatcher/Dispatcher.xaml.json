@@ -6,8 +6,8 @@
   "OriginalIconFileName": null,
   "Arguments": [
     {
-      "Name": "FilteredDataTable",
-      "DisplayName": "FilteredDataTable",
+      "Name": "FlowConfig",
+      "DisplayName": "FlowConfig",
       "Category": null,
       "Tooltip": null,
       "Placeholder": null,

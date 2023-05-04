@@ -4,5 +4,6 @@
 	"CredentialsAssetName": "AcmeCredentials",
 	"QueueName": "Filtered_Work_Items",
 	"BotType": "Dispatcher",
-	"AcmeUrl": "https://acme-test.uipath.com/login"
+	"AcmeUrl": "https://acme-test.uipath.com/login",
+	"WorkItemType": "WI3"
 }

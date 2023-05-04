@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1192,3919</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1192,3959</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Login_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -123,7 +123,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This sequence logins the acme page using user credentials and submits the credentials for accessing the dashboard " DisplayName="LoginAcme" sap:VirtualizedContainerService.HintSize="760,3854" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This sequence logins the acme page using user credentials and submits the credentials for accessing the dashboard " DisplayName="LoginAcme" sap:VirtualizedContainerService.HintSize="760,3894" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="UserName" />
       <Variable x:TypeArguments="sd:Image" Name="Image" />
@@ -138,20 +138,20 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="698,92" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Login Sequence Started&quot;]" />
-    <TryCatch sap2010:Annotation.AnnotationText="Works as a overall try catch scope for rethrowing the business rule exception caused by failure of access" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="698,3448" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch sap2010:Annotation.AnnotationText="Works as a overall try catch scope for rethrowing the business rule exception caused by failure of access" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="698,3488" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="Main Page sequence" sap:VirtualizedContainerService.HintSize="660,3189" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="Main Page sequence" sap:VirtualizedContainerService.HintSize="660,3229" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" sap2010:Annotation.AnnotationText="Has the scope of the login page of the acme" CvMethod="ElementDetection, OCR" DesignTimeCacheId="cd1c5ff7-1dd6-4830-9c6e-7dbf4b54655b" DisplayName="CV Screen Scope 'BODY'" sap:VirtualizedContainerService.HintSize="598,3078" sap2010:WorkflowViewState.IdRef="CVScope_2" SendOnPremData="False" Version="V6">
+          <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" sap2010:Annotation.AnnotationText="Has the scope of the login page of the acme" CvMethod="ElementDetection, OCR" DesignTimeCacheId="cd1c5ff7-1dd6-4830-9c6e-7dbf4b54655b" DisplayName="CV Screen Scope 'BODY'" sap:VirtualizedContainerService.HintSize="598,3118" sap2010:WorkflowViewState.IdRef="CVScope_2" SendOnPremData="False" Version="V6">
             <p:CVScope.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
@@ -202,7 +202,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Trace" Message="[&quot;Getting Credentials from asset&quot;]" />
-                              <ui:GetRobotCredential TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Gets the corresponding credentials of the user for accessing the acme Dashboard" AssetName="CredentialsAssetName" CacheStrategy="None" DisplayName="Get Credential" FolderPath="WorkspaceName" sap:VirtualizedContainerService.HintSize="388,185" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3" Password="[Password]" Username="[UserName]">
+                              <ui:GetRobotCredential TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Gets the corresponding credentials of the user for accessing the acme Dashboard" AssetName="[CredentialsAssetName]" CacheStrategy="None" DisplayName="Get Credential" FolderPath="[WorkspaceName]" sap:VirtualizedContainerService.HintSize="388,185" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3" Password="[Password]" Username="[UserName]">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>

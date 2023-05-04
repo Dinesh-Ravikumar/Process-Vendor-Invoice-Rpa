@@ -1,0 +1,20 @@
+{
+  "DisplayName": "Performer",
+  "Tooltip": "This sequence performs the queue transaction items for further processes",
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "FlowConfig",
+      "DisplayName": "FlowConfig",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    }
+  ]
+}

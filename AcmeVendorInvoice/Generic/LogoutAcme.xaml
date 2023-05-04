@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Logout" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1182,2530" sap2010:WorkflowViewState.IdRef="Logout_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Logout" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1003,2252" sap2010:WorkflowViewState.IdRef="Logout_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -87,7 +87,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This sequence logs out the user in the acme webpage" DisplayName="LogoutAcme" sap:VirtualizedContainerService.HintSize="606,2465" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This sequence logs out the user in the acme webpage" DisplayName="LogoutAcme" sap:VirtualizedContainerService.HintSize="606,2187" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:Image" Name="Image" />
     </Sequence.Variables>
@@ -98,7 +98,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="544,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Logout Sequence Started&quot;]" />
-    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="8d0543cc-1fd1-4127-8fb2-b846c02faae6" DisplayName="CV Screen Scope 'NAV'" sap:VirtualizedContainerService.HintSize="544,2013" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="8d0543cc-1fd1-4127-8fb2-b846c02faae6" DisplayName="CV Screen Scope 'NAV'" sap:VirtualizedContainerService.HintSize="544,1735" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
       <p:CVScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -108,25 +108,32 @@
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="IsLogoutButtonExist" />
             </Sequence.Variables>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="510,1718" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="510,1440" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <TryCatch.Try>
-                <Sequence sap:VirtualizedContainerService.HintSize="472,1490" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence sap:VirtualizedContainerService.HintSize="472,1212" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="410,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Finding if the element exist&quot;]" />
-                  <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Text 'Log Out' (1471,18,51,16)&quot;]" DesignTimeCacheId="8d0543cc-1fd1-4127-8fb2-b846c02faae6" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Log Out Button" sap:VirtualizedContainerService.HintSize="410,137" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_1" InformativeScreenshot="b0aa913eb4d761ea47a440da95abac05" NumberOfScrolls="2" Result="[IsLogoutButtonExist]" ScrollDirection="None" Version="V6">
+                  <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Text 'Log Out' (1471,18,51,16)&quot; +&#xD;&#xA;&quot;Anchor: Text 'ACME System 1' (379,16,133,20)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Home' (1244,18,39,13)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Switch to new theme' (1311,17,131,14)&quot;]" DesignTimeCacheId="8d0543cc-1fd1-4127-8fb2-b846c02faae6" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Text" sap:VirtualizedContainerService.HintSize="410,137" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_1" InformativeScreenshot="a238eddcb457a615e4dfc5040994ab5c" NumberOfScrolls="2" Result="[IsLogoutButtonExist]" ScrollDirection="None" Version="V6">
                     <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
-                      <uc:CvDescriptor Id="77a69235-d79d-477d-846a-5a67dc8826d8">
+                      <uc:CvDescriptor Id="f2c4fa71-41fc-433b-92b2-14691cb2e6af">
+                        <uc:CvDescriptor.Anchors>
+                          <x:Array Type="uc:CvElementDescriptor">
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="379, 16, 133, 20" ElementType="Text" Text="ACME System 1" />
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1244, 18, 39, 13" ElementType="Text" Text="Home" />
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1311, 17, 131, 14" ElementType="Text" Text="Switch to new theme" />
+                          </x:Array>
+                        </uc:CvDescriptor.Anchors>
                         <uc:CvDescriptor.Target>
                           <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1471, 18, 51, 16" ElementType="Text" Text="Log Out" />
                         </uc:CvDescriptor.Target>
                       </uc:CvDescriptor>
                     </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
                   </p:CvElementExistsWithDescriptor>
-                  <If sap2010:Annotation.AnnotationText="Checks if the log out button exist, in which log out appears when the acme webpage is already logged in`" Condition="[IsLogoutButtonExist]" sap:VirtualizedContainerService.HintSize="410,1070" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If sap2010:Annotation.AnnotationText="Checks if the log out button exist, in which log out appears when the acme webpage is already logged in`" Condition="[IsLogoutButtonExist]" sap:VirtualizedContainerService.HintSize="410,792" sap2010:WorkflowViewState.IdRef="If_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -140,7 +147,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Clicking the logout, Logging out the user&quot;]" />
-                        <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Clicks on the log out button" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Log Out' (1471,18,51,16)&quot;]" DesignTimeCacheId="8d0543cc-1fd1-4127-8fb2-b846c02faae6" DesignTimeScaleFactor="1" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="b0aa913eb4d761ea47a440da95abac05" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                        <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Clicks on the log out button" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Log Out' (1471,18,51,16)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Switch to new theme' (1311,17,131,14)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Home' (1244,18,39,13)&quot; +&#xD;&#xA;&quot;Anchor: Text 'ACME System 1' (379,16,133,20)&quot;]" DesignTimeCacheId="8d0543cc-1fd1-4127-8fb2-b846c02faae6" DesignTimeScaleFactor="1" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="40c3e37dad2d084922233ca02ea1521d" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
                           <p:CvClickWithDescriptor.CursorPosition>
                             <ui:CursorPosition Position="Center">
                               <ui:CursorPosition.OffsetX>
@@ -152,7 +159,14 @@
                             </ui:CursorPosition>
                           </p:CvClickWithDescriptor.CursorPosition>
                           <p:CvClickWithDescriptor.DesignTimeDescriptor>
-                            <uc:CvDescriptor Id="9a0c2546-2cb1-4dcb-b1d4-36c35e492bbf">
+                            <uc:CvDescriptor Id="40a0f368-4752-45b8-8072-2ecf15595984">
+                              <uc:CvDescriptor.Anchors>
+                                <x:Array Type="uc:CvElementDescriptor">
+                                  <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1311, 17, 131, 14" ElementType="Text" Text="Switch to new theme" />
+                                  <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1244, 18, 39, 13" ElementType="Text" Text="Home" />
+                                  <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="379, 16, 133, 20" ElementType="Text" Text="ACME System 1" />
+                                </x:Array>
+                              </uc:CvDescriptor.Anchors>
                               <uc:CvDescriptor.Target>
                                 <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1471, 18, 51, 16" ElementType="Text" Text="Log Out" />
                               </uc:CvDescriptor.Target>
