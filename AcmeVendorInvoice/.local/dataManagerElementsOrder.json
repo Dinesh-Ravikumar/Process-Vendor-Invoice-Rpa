@@ -40,10 +40,10 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "Config&Sequence_1",
-        "FlowConfigString&Sequence_1",
         "ExtractDataTable&Sequence_1",
-        "FilteredDataTable&Sequence_1"
+        "FilteredDataTable&Sequence_1",
+        "FlowConfigString&Sequence_1",
+        "Config&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": null,
@@ -126,6 +126,8 @@
       "Path": "Vendor PDF Workflow/DownloadPdf.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "IsFileSaved&Sequence_20",
+        "IsFileExist&Sequence_14",
         "Window&Sequence_20",
         "IsDownloadButtonExist&Sequence_12",
         "IsSaveAsWindowExist&Sequence_13",
@@ -243,7 +245,9 @@
     {
       "Path": "Navigation And Access/GoBack.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "Image&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
@@ -274,21 +278,27 @@
       "Path": "Dispatcher/Dispatcher.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "Config&Sequence_1",
+        "sample&Sequence_1",
+        "QueueName&Sequence_1",
+        "WorkspaceName&Sequence_1",
         "FlowConfigString&Sequence_1",
         "ExtractedDataTable&Sequence_1",
         "FilteredDataTable&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
-        "Config"
+        "FlowConfig"
       ],
       "ConstantsSectionElementsOrder": null,
-      "AddedNamespaces": null
+      "AddedNamespaces": [
+        "UiPath.DataTableUtilities"
+      ]
     },
     {
       "Path": "Performer/Performer.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "QueueName&Sequence_1",
+        "FolderPath&Sequence_1",
         "FlowConfigString&Sequence_1",
         "Config&Sequence_1",
         "VendorPdfText&Sequence_2",
@@ -308,7 +318,7 @@
         "TransactionItem&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
-        "Config"
+        "FlowConfig"
       ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
@@ -322,6 +332,16 @@
         "FilteredDataTable",
         "BotType"
       ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Generic/CloseBrowser.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Image&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     }
